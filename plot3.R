@@ -27,9 +27,10 @@ with(data, {
     # Line 3, blue
     lines(Datetime, Sub_metering_3, col = "Blue")
     
-    # Legend (spaces are used as a workaround to the size of the legend)
+    # Legend
+    # Labels do not seem to fit the legend.
     # Please let me know, if you have a solution how to resize the legend :-)
-    legend("topright", c("Sub_metering_1            ", "Sub_metering_2", "Sub_metering_3"), lwd = c(2,2,2), col = c("Black","Red","Blue"))
+    legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd = c(2,2,2), col = c("Black","Red","Blue"))
 })
 
 # Make PNG

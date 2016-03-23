@@ -25,14 +25,14 @@ with(data, {
     lines(Datetime, Sub_metering_1)
     lines(Datetime, Sub_metering_2, col = "Red")
     lines(Datetime, Sub_metering_3, col = "Blue")
-    legend("topright", c("Sub_metering_1            ", "Sub_metering_2", "Sub_metering_3"), bty = "n", lwd = c(2,2,2), col = c("Black","Red","Blue"))
+    legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n", lwd = c(2,2,2), col = c("Black","Red","Blue"))
     
     # Plot 3
-    plot(Datetime, Voltage, pch = ".", ylab = "Voltage", xlab = "Datetime")
+    plot(Datetime, Voltage, pch = ".", ylab = "Voltage", xlab = "datetime")
     lines(Datetime, Voltage)
     
     # Plot 4
-    plot(Datetime, Global_reactive_power, pch = ".", xlab = "Datetime")
+    plot(Datetime, Global_reactive_power, pch = ".", xlab = "datetime")
     lines(Datetime, Global_reactive_power)
     
 })
