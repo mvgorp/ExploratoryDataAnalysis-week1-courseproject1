@@ -30,7 +30,7 @@ with(data, {
     # Legend
     # Labels do not seem to fit the legend.
     # Please let me know, if you have a solution how to resize the legend :-)
-    legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd = c(2,2,2), col = c("Black","Red","Blue"))
+    legend("topright", c("Sub_metering_1                                    ", "Sub_metering_2", "Sub_metering_3"), lwd = c(2,2,2), col = c("Black","Red","Blue"), y.intersp = 1.5)
 })
 
 # Make PNG
