@@ -10,6 +10,9 @@ if(!exists('fulldata')) {
 # Subset 2 days
 data = subset(fulldata, Date2 >= as.Date("2007-02-01") & Date2 <= as.Date("2007-02-02"))
 
+# Default par
+par(mfcol = c(1, 1), mar = c(5,5,2,3))
+
 # Build graph
 with(data, {
     #
@@ -24,8 +27,9 @@ with(data, {
     # Line 3, blue
     lines(Datetime, Sub_metering_3, col = "Blue")
     
-    # Legend
-    legend("topright", c("Submet1", "Submet2", "Submet3"), lwd = c(2,2,2), col = c("Black","Red","Blue"))
+    # Legend (spaces are used as a workaround to the size of the legend)
+    # Please let me know, if you have a solution how to resize the legend :-)
+    legend("topright", c("Sub_metering_1            ", "Sub_metering_2", "Sub_metering_3"), lwd = c(2,2,2), col = c("Black","Red","Blue"))
 })
 
 # Make PNG

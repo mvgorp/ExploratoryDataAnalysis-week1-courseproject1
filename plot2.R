@@ -10,6 +10,9 @@ if(!exists('fulldata')) {
 # Subset 2 days
 data = subset(fulldata, Date2 >= as.Date("2007-02-01") & Date2 <= as.Date("2007-02-02"))
 
+# Default par
+par(mfcol = c(1, 1), mar = c(5,5,2,3))
+
 # Build graph
 with(data, {
     plot(Datetime, Global_active_power, pch = ".", ylab = "Global Active Power (kilowatts)", xlab = "")

@@ -8,7 +8,10 @@ fulldata$Date2 = as.Date( as.character(fulldata$Date), "%d/%m/%Y")
 
 # Subset 2 days
 data = subset(fulldata, Date2 >= as.Date("2007-02-01") & Date2 <= as.Date("2007-02-02"))
-    
+
+# Default par
+par(mfcol = c(1, 1), mar = c(5,5,2,3))
+
 # Build Graph
 with(data, hist(Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)"))
 
