@@ -1,13 +1,13 @@
 # Load fulldata, if not yet available
-#if(!exists('fulldata')) { 
+if(!exists('fulldata')) { 
     fulldata = read.table('household_power_consumption.txt', header = TRUE, sep = ";", na.strings = "?")
-#}
+}
 
 # Reformat Date
-fulldata$Date <- as.Date( as.character(fulldata$Date), "%d/%m/%Y")
+fulldata$Date2 = as.Date( as.character(fulldata$Date), "%d/%m/%Y")
 
 # Subset 2 days
-data = subset(fulldata, Date >= as.Date("2007-02-01") & Date <= as.Date("2007-02-02"))
+data = subset(fulldata, Date2 >= as.Date("2007-02-01") & Date2 <= as.Date("2007-02-02"))
     
 # Build Graph
 with(data, hist(Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)"))
